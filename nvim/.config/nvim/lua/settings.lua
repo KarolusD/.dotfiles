@@ -33,22 +33,14 @@ wo.signcolumn = 'yes'
 wo.wrap = false
 wo.number = true
 
--- Load the colorscheme
--- vim.g.ayucolor = "dark"
-
-vim.cmd('set fillchars=eob:\\ ')
-vim.cmd(':hi Cursor guifg=black')
--- Example config in Lua
+-- vim.cmd('set fillchars=eob:\\ ')
+-- vim.cmd(':hi Cursor guifg=black')
 vim.g.tokyonight_style = "night"
--- vim.g.tokyonight_italic_functions = false
--- vim.g.tokyonight_sidebars = { "qf", "vista_kind", "terminal", "packer" }
-
--- Change the "hint" color to the "orange" color, and make the "error" color bright red
-vim.g.tokyonight_colors = { hint = "orange", error = "#ff0000" }
+vim.g.tokyonight_italic_functions = true
+vim.g.tokyonight_sidebars = { "qf", "vista_kind", "terminal", "packer" }
 
 -- Load the colorscheme
-vim.cmd[[colorscheme tokyonight]]
-
 
 vim.g.dashboard_default_executive = "telescope"
+vim.cmd[[colorscheme tokyonight]]
 

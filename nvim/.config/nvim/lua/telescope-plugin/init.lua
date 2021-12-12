@@ -1,11 +1,12 @@
 local actions = require('telescope.actions')
+
 require('telescope').setup {
   defaults = {
     layout_config = {width = 0.75, prompt_position = "bottom", preview_cutoff = 120, horizontal = {mirror = false}, vertical = {mirror = false}},
     find_command = {'rg', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case'},
     prompt_prefix = "  ",
     selection_caret = "  ",
-    entry_prefix = "  ",
+    entry_prefix = " ",
     initial_mode = "insert",
     selection_strategy = "reset",
     sorting_strategy = "descending",
@@ -16,7 +17,7 @@ require('telescope').setup {
     path_display = {},
     winblend = 0,
     border = {},
-    borderchars = {'─', '│', '─', '│', ' ╭', '╮ ', '╯', '╰'},
+    borderchars = {'─', '│', '─', '│', '╭', '╮', '╯', '╰'},
     color_devicons = true,
     use_less = true,
     set_env = {['COLORTERM'] = 'truecolor'}, -- default = nil,
@@ -40,5 +41,3 @@ require('telescope').setup {
     }
   }
 }
-
-require("telescope").load_extension("media_files")

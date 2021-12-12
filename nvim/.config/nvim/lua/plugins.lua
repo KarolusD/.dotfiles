@@ -8,17 +8,12 @@ return require('packer').startup(
     use '907th/vim-auto-save'  
     use 'tpope/vim-repeat'
 
-    -- LSP && auto-completion:
-    use 'sheerun/vim-polyglot'            
-    use 'kabouzeid/nvim-lspinstall'
-    use { 'nvim-treesitter/nvim-treesitter', branch = '0.5-compat', run = ':TSUpdate' }
+    -- LSP
     use 'neovim/nvim-lspconfig'           
-    use {
-      "ray-x/lsp_signature.nvim",
-    }
-    use 'nvim-lua/completion-nvim'
+    use 'williamboman/nvim-lsp-installer'
     use 'onsails/lspkind-nvim'            
-    use 'windwp/nvim-autopairs'           
+    use 'ray-x/lsp_signature.nvim'
+    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
     -- theme and icons
     use 'folke/tokyonight.nvim' 
@@ -26,14 +21,23 @@ return require('packer').startup(
     use 'norcalli/nvim-colorizer.lua'
     
     -- snippet support
-    use 'hrsh7th/vim-vsnip'
     use 'rafamadriz/friendly-snippets'
+    use 'L3MON4D3/LuaSnip'
+    use 'saadparwaiz1/cmp_luasnip'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/nvim-cmp'
+    use 'windwp/nvim-autopairs'           
+    use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}   
     
     -- file managing, window switching, popups
     use 'kyazdani42/nvim-tree.lua'
     use 'christoomey/vim-tmux-navigator'
-    use 'nvim-telescope/telescope.nvim'
-    use 'nvim-telescope/telescope-media-files.nvim'
+    use {
+      'nvim-telescope/telescope.nvim',
+      requires = {
+        'nvim-lua/plenary.nvim',
+      },
+    }
     use 'nvim-lua/popup.nvim'
     use 'ggandor/lightspeed.nvim'
 
@@ -60,8 +64,9 @@ return require('packer').startup(
 
     -- JS related plugins
     use 'pangloss/vim-javascript'
-    use 'leafgarland/typescript-vim'
     use 'peitalin/vim-jsx-typescript'
+    use 'HerringtonDarkholme/yats.vim'
+    use 'maxmellon/vim-jsx-pretty'
     use 'styled-components/vim-styled-components'
     use 'jparise/vim-graphql'
     use 'tpope/vim-surround'

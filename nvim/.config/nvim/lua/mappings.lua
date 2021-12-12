@@ -32,12 +32,6 @@ key_mapper('v', '>', '>gv')
 
 -- Finding files and buffers
 key_mapper("n", "<Leader>ff", [[<Cmd>lua require('telescope.builtin').find_files()<CR>]], opt)
-key_mapper(
-    "n",
-    "<Leader>fp",
-    [[<Cmd>lua require('telescope').extensions.media_files.media_files()<CR>]],
-    opt
-)
 key_mapper('n', '<leader>fs', ':Telescope live_grep<CR>')
 key_mapper('n', '<leader>fo', ':Telescope file_browser<CR>')
 key_mapper('n', '<leader>ff', ':Telescope find_files<CR>')
