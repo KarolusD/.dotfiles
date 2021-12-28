@@ -1,37 +1,30 @@
---highlight EndOfBuffer ctermfg=black ctermbg=black- helpful commands
--- :h lua-vie-options
 -- :h option-name
-local vim = vim
-local o = vim.o
-local bo = vim.bo
-local wo = vim.wo
-
-o.cursorline = true
-o.termguicolors = true
-o.syntax = 'on'
-o.errorbells = false
-o.smartcase = true
-o.mouse = 'a'
-o.showmode = false
-o.clipboard = "unnamedplus"
-o.backup = false
-o.undodir = vim.fn.stdpath('config') .. '/undodir'
-o.undofile = true
-o.incsearch = true
-o.hidden = true
-o.completeopt = 'noinsert,noselect,menuone'
-o.tabstop = 2
-o.softtabstop = 2
-o.shiftwidth = 2
-o.expandtab = true
-bo.autoindent = true
-bo.smartindent = true
-bo.swapfile = false
-wo.number = true
-wo.relativenumber = true
-wo.signcolumn = 'yes'
-wo.wrap = false
-wo.number = true
+vim.opt.cursorline = true
+vim.opt.termguicolors = true
+vim.opt.syntax = 'on'
+vim.opt.errorbells = false
+vim.opt.smartcase = true
+vim.opt.mouse = 'a'
+vim.opt.showmode = false
+vim.opt.clipboard = "unnamedplus"
+vim.opt.backup = false
+vim.opt.undodir = vim.fn.stdpath('config') .. '/undodir'
+vim.opt.undofile = true
+vim.opt.incsearch = true
+vim.opt.hidden = true
+vim.opt.completeopt = 'noinsert,noselect,menuone'
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.expandtab = true
+vim.opt.autoindent = true
+vim.opt.smartindent = true
+vim.opt.swapfile = false
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.signcolumn = 'yes'
+vim.opt.wrap = false
+vim.opt.number = true
 
 -- vim.cmd('set fillchars=eob:\\ ')
 -- vim.cmd(':hi Cursor guifg=black')

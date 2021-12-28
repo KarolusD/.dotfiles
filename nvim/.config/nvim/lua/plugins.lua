@@ -50,7 +50,6 @@ return require('packer').startup(
     use 'tpope/vim-fugitive'
 
     -- making vim closer to IDE 
-    use 'sbdchd/neoformat'
     use 'alvan/vim-closetag'
     use 'nvim-lua/plenary.nvim'
     use 'tpope/vim-commentary'

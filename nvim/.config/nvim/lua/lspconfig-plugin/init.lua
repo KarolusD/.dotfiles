@@ -32,9 +32,9 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 
    -- formatting
-  -- if client.name == 'tsserver' then
-  --   client.resolved_capabilities.document_formatting = false
-  -- end 
+  if client.name == 'tsserver' then
+    client.resolved_capabilities.document_formatting = false
+  end 
 
   if client.resolved_capabilities.document_formatting then
     vim.api.nvim_command [[augroup Format]]
@@ -42,7 +42,6 @@ local on_attach = function(client, bufnr)
     vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
     vim.api.nvim_command [[augroup END]]
   end
-
 -- icons
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 for type, icon in pairs(signs) do
@@ -96,7 +95,7 @@ nvim_lsp.diagnosticls.setup {
   init_options = {
     linters = {
       eslint = {
-        command = 'eslint',
+        command = 'eslint_d',
         rootPatterns = { '.git' },
         debounce = 100,
         args = { '--stdin', '--stdin-filename', '%filepath', '--format', 'json' },
@@ -125,23 +124,26 @@ nvim_lsp.diagnosticls.setup {
     formatters = {
       eslint_d = {
         command = 'eslint_d',
+        rootPatterns = { '.git' },
         args = { '--stdin', '--stdin-filename', '%filename', '--fix-to-stdout' },
         rootPatterns = { '.git' },
       },
       prettier = {
-        command = 'prettier',
-        args = { '--stdin-filepath', '%filename' }
+        command = 'prettier_d_slim',
+        rootPatterns = { '.git' },
+        -- requiredFiles: { 'prettier.config.js' },
+        args = { '--stdin', '--stdin-filepath', '%filename' }
       }
     },
     formatFiletypes = {
       css = 'prettier',
-      javascript = 'eslint',
-      javascriptreact = 'eslint',
+      javascript = 'eslint_d',
+      javascriptreact = 'eslint_d',
       json = 'prettier',
       scss = 'prettier',
       less = 'prettier',
-      typescript = 'eslint',
-      typescriptreact = 'eslint',
+      typescript = 'eslint_d',
+      typescriptreact = 'eslint_d',
       json = 'prettier',
       markdown = 'prettier',
     }

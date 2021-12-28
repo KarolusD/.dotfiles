@@ -94,11 +94,6 @@ _G.packer_plugins = {
     path = "/Users/karolus/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["editorconfig-vim"] = {
-    loaded = true,
-    path = "/Users/karolus/.local/share/nvim/site/pack/packer/start/editorconfig-vim",
-    url = "https://github.com/editorconfig/editorconfig-vim"
-  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/karolus/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -124,30 +119,15 @@ _G.packer_plugins = {
     path = "/Users/karolus/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
     url = "https://github.com/onsails/lspkind-nvim"
   },
-  ["lspsaga.nvim"] = {
-    loaded = true,
-    path = "/Users/karolus/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
-    url = "https://github.com/glepnir/lspsaga.nvim"
-  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/karolus/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/hoob3rt/lualine.nvim"
   },
-  neoformat = {
-    loaded = true,
-    path = "/Users/karolus/.local/share/nvim/site/pack/packer/start/neoformat",
-    url = "https://github.com/sbdchd/neoformat"
-  },
   ["neoscroll.nvim"] = {
     loaded = true,
     path = "/Users/karolus/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
     url = "https://github.com/karb94/neoscroll.nvim"
-  },
-  ["null-ls.nvim"] = {
-    loaded = true,
-    path = "/Users/karolus/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
-    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -164,20 +144,15 @@ _G.packer_plugins = {
     path = "/Users/karolus/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
     url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
-  ["nvim-lsp-ts-utils"] = {
+  ["nvim-lsp-installer"] = {
     loaded = true,
-    path = "/Users/karolus/.local/share/nvim/site/pack/packer/start/nvim-lsp-ts-utils",
-    url = "https://github.com/jose-elias-alvarez/nvim-lsp-ts-utils"
+    path = "/Users/karolus/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
+    url = "https://github.com/williamboman/nvim-lsp-installer"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/karolus/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
-  },
-  ["nvim-lspinstall"] = {
-    loaded = true,
-    path = "/Users/karolus/.local/share/nvim/site/pack/packer/start/nvim-lspinstall",
-    url = "https://github.com/kabouzeid/nvim-lspinstall"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -208,16 +183,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/karolus/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
-  },
-  ["telescope-fzf-native.nvim"] = {
-    loaded = true,
-    path = "/Users/karolus/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
-    url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
-  },
-  ["telescope-media-files.nvim"] = {
-    loaded = true,
-    path = "/Users/karolus/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim",
-    url = "https://github.com/nvim-telescope/telescope-media-files.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -273,11 +238,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/karolus/.local/share/nvim/site/pack/packer/start/vim-markdown",
     url = "https://github.com/plasticboy/vim-markdown"
-  },
-  ["vim-polyglot"] = {
-    loaded = true,
-    path = "/Users/karolus/.local/share/nvim/site/pack/packer/start/vim-polyglot",
-    url = "https://github.com/sheerun/vim-polyglot"
   },
   ["vim-repeat"] = {
     loaded = true,

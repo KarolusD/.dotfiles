@@ -20,7 +20,7 @@ key_mapper('i', 'jk', '<ESC>')
 key_mapper('i', 'kj', '<ESC>')
 key_mapper('i', 'jj', '<ESC>')
 
--- better window movement (command mode)
+-- better window movement (normal mode)
 key_mapper('n', '<C-h>', '<C-w>h')
 key_mapper('n', '<C-j>', '<C-w>j')
 key_mapper('n', '<C-k>', '<C-w>k')
@@ -30,8 +30,12 @@ key_mapper('n', '<C-l>', '<C-w>l')
 key_mapper('v', '<', '<gv')
 key_mapper('v', '>', '>gv')
 
+-- spliting windows
+key_mapper('n', '<Leader>|', ':vsplit<CR>')
+key_mapper('n', '<Leader>-', ':split<CR>')
+
 -- Finding files and buffers
-key_mapper("n", "<Leader>ff", [[<Cmd>lua require('telescope.builtin').find_files()<CR>]], opt)
+key_mapper('n', '<Leader>ff', [[<Cmd>lua require('telescope.builtin').find_files()<CR>]], opt)
 key_mapper('n', '<leader>fs', ':Telescope live_grep<CR>')
 key_mapper('n', '<leader>fo', ':Telescope file_browser<CR>')
 key_mapper('n', '<leader>ff', ':Telescope find_files<CR>')

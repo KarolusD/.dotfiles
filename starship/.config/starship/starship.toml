@@ -8,8 +8,8 @@ threshold = 30
 style = "bold red" 
 
 [character]
-success_symbol = "[λ](green)"
-error_symbol = "[λ](bold red)"
+success_symbol = "[❯](green)"
+error_symbol = "[❯](bold red)"
 
 [directory]
 truncation_length = 5
@@ -47,11 +47,6 @@ format = "<[$hostname]($style)>"
 trim_at = "-"
 style = "bold orange"
 disabled = true
-
-[time]
-disabled = false
-format = '[\[ $time \]]($style) '
-time_format = "%R"
 
 [package]
 disabled = true
