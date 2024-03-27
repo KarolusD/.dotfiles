@@ -13,7 +13,7 @@ return {
 		bottom = 0,
 	},
 	font = wezterm.font_with_fallback({
-		{ family = "JetBrainsMono Nerd Font" },
+		{ family = "JetBrainsMono Nerd Font", weight = 500 },
 	}),
 	use_cap_height_to_scale_fallback_fonts = true,
 	font_size = 16,
