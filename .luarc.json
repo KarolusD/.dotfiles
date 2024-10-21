@@ -1,0 +1,19 @@
+{
+    "diagnostics.disable": [
+        "incomplete-signature-doc",
+        "trailing-space",
+        "no-unknown"
+    ],
+    "runtime.version": "LuaJIT",
+    "runtime.special": {
+        "love.filesystem.load": "loadfile"
+    },
+    "workspace.library": [
+        "${3rd}/love2d/library",
+        "${3rd}/OpenResty/library"
+    ],
+    "diagnostics.globals": [
+        "vim",
+        "ngx"
+    ]
+}
